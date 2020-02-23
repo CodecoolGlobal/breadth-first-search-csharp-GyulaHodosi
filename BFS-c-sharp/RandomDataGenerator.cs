@@ -7,6 +7,7 @@ namespace BFS_c_sharp
     public class RandomDataGenerator
     {
         private Random rng = new Random(1234);
+        private int id = 0;
         private String[] firstNames = {
             "Inez", "Emery", "Virginia", "Charissa", "Tyrone", "Ayanna", "Jena", "Ora",
             "Cooper", "Gareth", "Karleigh", "Aladdin", "Arden", "Pearl", "Mariko", "Hadley",
@@ -55,7 +56,7 @@ namespace BFS_c_sharp
 
         private UserNode GenerateNewUser()
         {
-            return new UserNode(GetRandomElement(firstNames), GetRandomElement(lastNames));
+            return new UserNode(GetRandomElement(firstNames), GetRandomElement(lastNames), id++);
         }
 
         private string GetRandomElement(string[] array)

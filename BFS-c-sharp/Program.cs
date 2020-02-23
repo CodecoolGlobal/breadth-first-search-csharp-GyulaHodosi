@@ -10,13 +10,13 @@ namespace BFS_c_sharp
         {
             RandomDataGenerator generator = new RandomDataGenerator();
             List<UserNode> users = generator.Generate();
+            FriendHandler friendHandler = new FriendHandler(users);
 
-            foreach (var user in users)
-            {
-                Console.WriteLine(user);
-            }
+            friendHandler.GetMinimumDistance("Alec Hillary", "Karleigh Winifred");
 
-            Console.WriteLine("Done");
+            friendHandler.GetFriendsByDistance("Alec Hillary", 3);
+
+            Console.WriteLine("\nDone");
             Console.ReadKey();
         }
     }

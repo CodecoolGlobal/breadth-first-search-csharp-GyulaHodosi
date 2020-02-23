@@ -17,10 +17,11 @@ namespace BFS_c_sharp.Model
 
         public UserNode() { }
 
-        public UserNode(string firstName, string lastName)
+        public UserNode(string firstName, string lastName, int id)
         {
             FirstName = firstName;
             LastName = lastName;
+            Id = id;
         }
 
         public void AddFriend(UserNode friend)
